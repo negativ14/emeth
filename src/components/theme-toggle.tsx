@@ -5,6 +5,7 @@ import { MoonStar, Sun } from "lucide-react";
 
 export const ModeToggle = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted] = useState(() => true);
 
   const [systemTheme, setSystemTheme] = useState<"light" | "dark">("light");
 
@@ -41,6 +42,10 @@ export const ModeToggle = () => {
       }
     }
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button onClick={SWITCH} className="size-4 flex item-center justfiy-center">
