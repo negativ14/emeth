@@ -1,4 +1,5 @@
 import Hero from "../components/hero";
+import LogoCloud from "../components/logoCloud";
 import { ModeToggle } from "../components/theme-toggle";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="font-space text-center py-10 text-4xl font-medium uppercase">
       <ModeToggle />
       <Hero />
+      <LogoCloud />
     </div>
   );
 }

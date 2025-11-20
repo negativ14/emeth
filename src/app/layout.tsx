@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "../providers/ThemeProvider";
-import Navbar from "../components/navbar";
+import { Navbar } from "../components/navbar";
 
 const inter = Inter({
   variable: "--font-inter",

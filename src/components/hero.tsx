@@ -3,8 +3,7 @@ import Container from "./container";
 import { Heading } from "./heading";
 import { SubHeading } from "./subHeading";
 import Link from "next/link";
-import Image from "next/image";
-import hero1 from "@/src/assets/images/hero1.jpg";
+import LandingImages from "./landingImages";
 
 export default function Hero() {
   return (
@@ -13,26 +12,18 @@ export default function Hero() {
         <Heading as="h1" className="text-start">
           Agents that do the work <br /> Approvals that keep you safe.
         </Heading>
-        <SubHeading className="py-8 text-left">
+        <SubHeading className="py-4 text-left">
           Display AI agents that plan, act through your tools and report
           outcomes-without changing how your team works
         </SubHeading>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 py-6">
           <Button className="shadow-brand">Start your free trail</Button>
           <Button variant={"outline"} asChild>
             <Link href={"#"}>View role based demo</Link>
           </Button>
         </div>
 
-        <div className="relative min-h-140 w-full">
-          <Image
-            src={hero1}
-            width={1920}
-            height={1080}
-            alt="hero img"
-            className="rounded-lg"
-          />
-        </div>
+        <LandingImages />
       </Container>
     </div>
   );
